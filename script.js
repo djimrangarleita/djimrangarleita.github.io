@@ -1,6 +1,7 @@
 const menu_button = document.querySelector('.h-icon');
 const nav_menu = document.querySelector('.nav-menu');
 const nav_items = document.querySelectorAll('ul.nav-items');
+const currentYear = document.querySelector("#current-year");
 
 menu_button.addEventListener('click', () => {
     menu_button.classList.toggle('is-active');
@@ -15,4 +16,6 @@ nav_items.forEach(nav_item => {
         }
     });
 });
+
+currentYear.textContent = new Date().getFullYear();
 
